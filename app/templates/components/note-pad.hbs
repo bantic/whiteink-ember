@@ -1,0 +1,8 @@
+{{#each draft.notes}}
+  <li class="bullet-after">{{text}}</li>
+{{/each}}
+{{#if canAddNote}}
+  {{#if willAddNote}}
+    {{new-note action="addNote"}}
+  {{/if}}
+{{/if}}

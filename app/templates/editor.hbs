@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <ul>
+      <div class="col-md-9">
+        {{#editable-draft}}{{editableDraft.text}}{{/editable-draft}}
+      </div>
+      <div class="col-md-3">
+        {{note-pad draft=editableDraft canAddNote=true willAddNote=willAddNote action="addNote"}}
+      </div>
+    </ul>
+  </div>
+
+    <hr>
+  <div class="row">
+    <ul>
+      {{#each reviewableDrafts}}
+        <div class="col-md-9">
+          <p class="draft reviewable-draft">{{text}}</p>
+        </div>
+      <div class="col-md-3">
+        {{note-pad draft=this}}
+      </div>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -5,6 +5,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('documents', {path: '/'});
+  this.resource('editor', { path: 'editor/:document_id' });
 });
 
 export default Router;
