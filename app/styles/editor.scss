@@ -9,18 +9,29 @@
       width: 80%;
 
       .draft {
-        @include typography-write;
+        @include typography-write3;
         @include flex-basis(70%);
+
+        &::first-line {
+          /*line-height: 0;*/
+        }
       }
 
       .notes {
         @include flex-basis(30%);
+
+        .note {
+          @include typography-write1;
+        }
       }
 
       .editable {
-        outline: none;
         @include display(flex);
         @include justify-content(center);
+
+        p {
+          outline: none;
+        }
       }
 
       .reviewable {

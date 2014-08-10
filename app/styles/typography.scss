@@ -1,8 +1,28 @@
-@mixin typography-write {
+$text1-font-size: rem(14);
+$text2-font-size: rem(16);
+$text3-font-size: rem(18); /* Bourbon converts pixels to rems */
+
+$text1-line-height: 1.4;
+$text3-line-height: 1.5;
+
+@mixin typography-write1 {
+  font-family: $helvetica;
+  font-size: $text1-font-size;
+  line-height: $text1-line-height;
+}
+
+@mixin typography-write3 {
   font-family: $georgia;
+  font-size: $text3-font-size;
+  line-height: $text3-line-height;
   letter-spacing: 0.01rem;
   font-weight: 400;
   font-style: normal;
-  font-size: rem(18); /* Bourbon converts pixels to rems */
-  line-height: 1.5;
+  /* This removes the top empty space of
+   * the line & is used properly align
+   * this text w/ other text of different
+   * line-heights. I could not find a
+   * better fix for this. - DH
+   */
+  margin-top: -$text3-font-size / 2;
 }
