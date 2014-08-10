@@ -9,6 +9,7 @@
       width: 80%;
 
       .draft {
+        @include typography-write;
         @include flex-basis(70%);
       }
 
@@ -17,6 +18,7 @@
       }
 
       .editable {
+        outline: none;
         @include display(flex);
         @include justify-content(center);
       }

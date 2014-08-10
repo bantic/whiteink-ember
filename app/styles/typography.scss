@@ -1,0 +1,8 @@
+@mixin typography-write {
+  font-family: $georgia;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(18); /* Bourbon converts pixels to rems */
+  line-height: 1.5;
+}
