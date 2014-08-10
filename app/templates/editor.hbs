@@ -1,26 +1,23 @@
 <div class="container">
-  <div class="row">
-    <ul>
-      <div class="col-md-9">
+  <div class='drafts'>
+    <div class='editable'>
+      <div class="draft">
         {{#editable-draft}}{{editableDraft.text}}{{/editable-draft}}
       </div>
-      <div class="col-md-3">
+      <div class="notes">
         {{note-pad draft=editableDraft canAddNote=true willAddNote=willAddNote action="addNote"}}
       </div>
-    </ul>
-  </div>
+    </div>
 
-    <hr>
-  <div class="row">
-    <ul>
+    <div class='reviewable'>
       {{#each reviewableDrafts}}
-        <div class="col-md-9">
-          <p class="draft reviewable-draft">{{text}}</p>
+        <div class="draft">
+          <p class="reviewable-draft">{{text}}</p>
         </div>
-      <div class="col-md-3">
-        {{note-pad draft=this}}
-      </div>
+        <div class="notes">
+          {{note-pad draft=this}}
+        </div>
       {{/each}}
-    </ul>
+    </div>
   </div>
 </div>

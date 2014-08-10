@@ -1,0 +1,32 @@
+@import 'components/note-pad';
+
+.editor {
+  .container {
+    @include display(flex);
+    @include justify-content(center);
+
+    .drafts {
+      width: 80%;
+
+      .draft {
+        @include flex-basis(70%);
+      }
+
+      .notes {
+        @include flex-basis(30%);
+      }
+
+      .editable {
+        @include display(flex);
+        @include justify-content(center);
+      }
+
+      .reviewable {
+        @include display(flex);
+        @include justify-content(center);
+      }
+
+    }
+
+  }
+}

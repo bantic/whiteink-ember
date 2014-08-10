@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   tagName: 'ul',
-  classNames: 'note-pad text-right no-bullets'.w(),
+  classNames: 'note-pad',
   canAddNote: false,
 
   actions: {

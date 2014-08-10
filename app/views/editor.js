@@ -4,6 +4,8 @@ import {setCaretToEndInContenteditable} from 'whiteink/helpers/caret-position';
 
 export default Ember.View.extend({
 
+  classNames: 'editor',
+
   focusEditableDraft: function() {
     var controller = this.controller;
     if (!controller.get('willAddNote')) {

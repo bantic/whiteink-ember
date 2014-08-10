@@ -1,0 +1,19 @@
+ul.note-pad {
+
+  padding: 0;
+
+  li.note {
+    position: relative;
+    text-align: right;
+    list-style-type: none;
+
+    &::after{
+      position: absolute;
+      top: 0;
+      padding-left: 2%;
+      content: "•";
+    }
+  }
+
+
+}
